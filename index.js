@@ -1,11 +1,10 @@
+//required modules
 const inquirer = require("inquirer");
 const fs = require("fs");
+const generateMarkDown = require("./utils/generateMarkDown.js");
 
-// const generateMarkDown = require('./utils/generateMarkDown.js');
-
-// TODO: Create an array of questions for user input
-
-const questions = () => {
+//Question array
+const init = () => {
   return inquirer.prompt([
     {
       type: "input",
@@ -89,7 +88,7 @@ const questions = () => {
       type: "checkbox",
       name: "license",
       message: "Which liscense would you like to add?",
-      choices: ["ISC", "MIT", "GPL", "Apache", "GNU", "no license"],
+      choices: ["ISC", "MIT", "GPL 3.0", "Apache 2.0", "none"],
       validate: (licenseInput) => {
         if (licenseInput) {
           return true;
@@ -128,24 +127,25 @@ const questions = () => {
   ]);
 };
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-    fs.writeToFile('README.md', data, err => {
-        if (err) {
-            console.log('Error, please try again!');
-            return;
-        } else {
-            console.log("README was created!")
-        }
-    })
+// function to write README file
+const writeFile = data => {
+  fs.writeFile("./dist/README.md", data, err => {
+    if (err) {
+      console.log(err);
+      return;
+    } else {
+      console.log(
+        "Your README has been successfully created in the 'dist' directory!"
+      );
+    }
+  });
 };
 
-// questions().then(answers => {
-//     return generatePage(answers);
-// })
-// .then(data => {
-//     return fs.writeFile(data);
-// })
-
-// Function call to initialize app
-questions();
+// function call to initialize program
+init()
+  .then(answers => {
+    return generateMarkDown(answers);
+  })
+  .then(data => {
+    return writeFile(data);
+  });
