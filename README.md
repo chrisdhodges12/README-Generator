@@ -10,7 +10,6 @@
   * [Usage](#usage)
   * [Contributing](#contribution)
   * [Tests](#tests)
-  * [License](#license)
   * [Questions](#questions)
   * [Media](#media)
 
