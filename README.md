@@ -4,6 +4,8 @@
   ## Description
   This command-line app prompts the user for information about a project in which they would like to create a README for.  The answers to the inquirer prompts are used to generate a markdown from a template.  The data collected includes project title, a description, installation guide, usage information, testing information, contributions, licensing, and contact information.
 
+  Created with node.js.
+
   ## Table of Contents
 
   * [Installation](#installation)

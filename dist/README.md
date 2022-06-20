@@ -1,13 +1,13 @@
 
 
   
-  ![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)
+  ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-  # My project Title
+  # What's For Dinner? 
 
   ## Description
 
-  This is a description
+  This application searches an api database to return recipes.  It includes a random recipe generator along with functionality to save results to local storage.
 
   ## Table of Contents
 
@@ -19,22 +19,18 @@
   * [Questions](#questions)
 
   ## Installation
-  npm install inquirer
+  none
 
   ## Usage
-  This will create a readme
-
+  Search for a recipe or find one at random.  Save resipes to local storage.
 
   ## Contributing
-  chris
-
+  Chris Hodges, Nina Siegel, Keon Mebane, Ashley Darr
   ## Tests
-  npm run test
-
-  
+  none 
   ## License
-  Licensed under ISC. 
-(https://opensource.org/licenses/ISC)
+  Licensed under MIT. 
+(https://opensource.org/licenses/MIT)
 
   ## Questions
   For questions, please email chrisdhodges12@gmail.com or find me on GitHub at https://github.com/chrisdhodges12.
